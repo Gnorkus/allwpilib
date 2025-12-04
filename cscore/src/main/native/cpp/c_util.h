@@ -16,7 +16,9 @@ inline void ConvertToC(struct WPI_String* output, std::string_view str) {
   size_t n = str.size();
   char* write = WPI_AllocateString(output, n);
   if (n>0)
+  {
     std::memcpy(write, str.data(), n);
+  }
 }
 
 }  // namespace cs
